@@ -78,7 +78,8 @@ public class ManagePhaseSteps {
 	
 	@And("Update the data for phase as {string}")
 	public void update_the_data_for_phase(String string) throws InterruptedException {
-		phase.updatePhaseName(string);		
+		phase.updatePhaseName(string);	
+		Utility.waitToLoad();
 		Utility.waitForServerToSave();
 	
 	}
@@ -94,6 +95,7 @@ public class ManagePhaseSteps {
 	public void select_the_option_to_delete_phase(String string) throws InterruptedException {	
 	   phase.deletePhase(string);
 	   Utility.waitToLoad();
+	   Utility.waitForServerToSave();
 	   
 	}
 	

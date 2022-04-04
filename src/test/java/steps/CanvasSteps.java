@@ -58,7 +58,7 @@ public class CanvasSteps {
 	@When("Delete the Note {string}")
 	public void delete_the_note(String string) throws InterruptedException {
 		canvas = new Canvas(BasicSetup.getDriver());
-		canvas.deleteNoteNodeAs(string);
+		canvas.deleteTheNode(string);
 		Utility.waitToLoad();
 		Utility.waitForServerToSave();
 	}

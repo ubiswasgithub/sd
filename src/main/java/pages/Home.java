@@ -84,6 +84,7 @@ public class Home {
 	
 	public void searchStudy() throws InterruptedException{	
 		Utility.waitToLoad();
+		Utility.waitForServerToSave();
 		Utility.waitForTheElementToBeVisible(search_locator, this.driver);
 		search_locator.clear();
 		search_locator.sendKeys(studyName);

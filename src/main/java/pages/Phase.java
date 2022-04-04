@@ -45,14 +45,14 @@ public class Phase {
 	WebElement _btn_cancel;
 	
 
-	@FindBy(how = How.XPATH, using = "//div[@class='mb-10 d-flex flex-row']//span[@class='mr-5 flex-grow-1']")
+	@FindBy(how = How.XPATH, using = "//div//span[@class='mr-5 flex-grow-1']")
 	List<WebElement> _total_phases;
 	
-	@FindBy(how = How.XPATH, using ="//div[@class='module mr-2 d-flex flex-column ng-star-inserted selected-module']//img[@alt='edit']")
-	WebElement option_to_edit_phase;
+	@FindBy(how = How.XPATH, using ="//div//img[@alt='edit']")
+	List<WebElement> option_to_edit_phases;
 	
 	@FindBy(how = How.XPATH, using ="//div//img[@alt='delete']")
-	WebElement option_to_delete;
+	WebElement option_to_delete_phase;
 	
 	@FindBy(how = How.XPATH, using ="//div/h4[text()='Confirmation']")
 	WebElement confirmation_modal_to_delete_phase;
@@ -142,7 +142,7 @@ public class Phase {
 		// TODO Auto-generated method stub
 		for (int i = 0;i<_total_phases.size(); i++) {
 			if (_total_phases.get(i).getText().toString().equalsIgnoreCase(string)) {
-				option_to_edit_phase.click();
+				option_to_edit_phases.get(i).click();
 				
 				break;
 			}
@@ -177,7 +177,7 @@ public class Phase {
 		
 		for (int i = 0;i<_total_phases.size(); i++) {
 			if (_total_phases.get(i).getText().toString().trim().equalsIgnoreCase(string)) {
-				option_to_delete.click();			
+				option_to_delete_phase.click();			
 				break;
 			}
 		}

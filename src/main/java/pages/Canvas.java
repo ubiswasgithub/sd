@@ -60,6 +60,10 @@ public class Canvas{
 	@FindBy(how = How.XPATH, using = "//div[@class='diagram-card header']//button/img[@alt='Edit']")
 	WebElement header_node_edit;
 	
+	
+	@FindBy(how = How.XPATH, using = "//div[@class='diagram-card header']//button/img[@alt='Delete']")
+	WebElement header_node_delete;
+	
 	private WebDriver driver;
 
 	public Canvas(WebDriver driver) {
@@ -128,12 +132,16 @@ public class Canvas{
 	}
 
 
-	public void deleteNoteNodeAs(String string) {
+	public void deleteTheNode(String string) {
 		// TODO Auto-generated method stub
 		
 		if(note_node.getText().toString().trim().equalsIgnoreCase(string)) {
 			note_node_delete.click();
 			note_delete_confirmation_yes.click();
+		}
+		else if(header_node.getText().toString().trim().equalsIgnoreCase(string)) {
+			header_node_delete.click();
+			header_delete_confirmation_yes.click();
 		}
 		
 	}
