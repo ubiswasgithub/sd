@@ -44,17 +44,19 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.sikulix</groupId>
-			<artifactId>sikulixapi</artifactId>
-			<scope>system</scope>
+			<groupId>sikulixlocal</groupId>
+			<artifactId>sikulixlocalapi</artifactId>
 			<version>2.0.5</version>
-			<systemPath>${sikulipath}\sikuli\sikulixapi-2.0.5-win.jar</systemPath>
 		</dependency>
 
 	</dependencies>
-	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<sikulipath>D:\test_repo\sd\src\test\resources</sikulipath>
-	</properties>
+
+	<repositories>
+		<repository>
+			<id>local-maven-repo</id>
+			<url>file:///${project.basedir}/local-maven-repo</url>
+		</repository>
+	</repositories>
+
+
 </project>

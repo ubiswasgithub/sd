@@ -55,10 +55,19 @@ public class CanvasSteps {
 		 Verify.verify(canvas.getDefaultNodeTitle(nodename, title));
 	}
 
-	@When("Delete the Note {string}")
-	public void delete_the_note(String string) throws InterruptedException {
+	@When("Delete the Note node {string}")
+	public void delete_the_note_node(String string) throws InterruptedException {
 		canvas = new Canvas(BasicSetup.getDriver());
-		canvas.deleteTheNode(string);
+		canvas.deleteTheNoteNode(string);
+		Utility.waitToLoad();
+		Utility.waitForServerToSave();
+	}
+	
+	
+	@When("Delete the Header node {string}")
+	public void delete_the_header_node(String string) throws InterruptedException {
+		canvas = new Canvas(BasicSetup.getDriver());
+		canvas.deleteTheHeaderNode(string);
 		Utility.waitToLoad();
 		Utility.waitForServerToSave();
 	}

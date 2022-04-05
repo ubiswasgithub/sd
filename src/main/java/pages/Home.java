@@ -27,7 +27,7 @@ public class Home {
 	@FindBy(how =How.XPATH, using = "//input[@placeholder='Search']")
 	WebElement search_locator;
 	
-	@FindBy(how = How.XPATH, using = "//div[@class='mat-list-text']")
+	@FindBy(how = How.XPATH, using = "//div[@class='selection-list']")
 	WebElement select_study_locator;
 	
 	@FindBy(how = How.XPATH, using = "//button/span[text()='Select']")

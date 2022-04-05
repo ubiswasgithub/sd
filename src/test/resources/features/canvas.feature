@@ -26,7 +26,7 @@ Scenario: Check user can delete Note node
       And Search for a Study
       And Select the Study 
       And Canvas is in Edit Mode   
-      And Delete the Note "Note_updated"
+      And Delete the Note node "Note_updated"
       Then Verify the "Note_updated" is not in the canvas
       And Close Browser
  	
@@ -57,6 +57,6 @@ Scenario: Check user can delete Note node
       And Search for a Study
       And Select the Study 
       And Canvas is in Edit Mode   
-      And Delete the Note "Header_updated"
+      And Delete the Header node "Header_updated"
       Then Verify the "Header_updated" is not in the canvas
       And Close Browser

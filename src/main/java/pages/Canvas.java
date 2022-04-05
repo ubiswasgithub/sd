@@ -132,14 +132,11 @@ public class Canvas{
 	}
 
 
-	public void deleteTheNode(String string) {
+	public void deleteTheHeaderNode(String string) {
 		// TODO Auto-generated method stub
 		
-		if(note_node.getText().toString().trim().equalsIgnoreCase(string)) {
-			note_node_delete.click();
-			note_delete_confirmation_yes.click();
-		}
-		else if(header_node.getText().toString().trim().equalsIgnoreCase(string)) {
+		
+		if(header_node.getText().toString().trim().equalsIgnoreCase(string)) {
 			header_node_delete.click();
 			header_delete_confirmation_yes.click();
 		}
@@ -156,6 +153,15 @@ public class Canvas{
 
 			note_save_btn.click();
 
+		}
+		
+	}
+
+
+	public void deleteTheNoteNode(String string) {
+		if(note_node.getText().toString().trim().equalsIgnoreCase(string)) {
+			note_node_delete.click();
+			note_delete_confirmation_yes.click();
 		}
 		
 	}
